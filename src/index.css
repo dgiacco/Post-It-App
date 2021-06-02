@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.postit-wall {
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.postit-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.postit {
+  background-color: #fff783;
+  padding: 2rem;
+  min-height: 8vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.postit-header {
+  display: flex;
+  flex-direction: row-reverse;
+}
