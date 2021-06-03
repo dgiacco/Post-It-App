@@ -1,14 +1,14 @@
 import PostIt from "./PostIt";
+import NewPostIt from "./NewPostIt";
 
-const PostItList = () => {
+const PostItList = ({ postIt }) => {
   return (
     <div className="postit-list">
-      <PostIt />
-      <PostIt />
-      <PostIt />
-      <PostIt />
-      <PostIt />
-      <PostIt />
+      { postIt.map((postIt) => (
+        <PostIt text={ postIt.text }/>
+      )) }
+      <NewPostIt />
+      <button className="addButton">+</button>
     </div>
   );
 };

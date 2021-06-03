@@ -20,22 +20,6 @@ code {
   margin-bottom: 2vw;
 }
 
-.newPostItButton {
-  min-width: 10vw;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  cursor: pointer;
-  padding: 0.5vw;
-  background-color: rgb(0, 0, 187);
-  color: white;
-}
-
-.newPostItButton:hover {
-  background-color: rgb(132, 196, 218);
-  color: black;
-}
-
 .postit-container {
   max-width: 80%;
   margin-right: auto;
@@ -46,6 +30,8 @@ code {
 
 .postit-list {
   display: grid;
+  justify-items: center;
+  align-items: center;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -53,10 +39,11 @@ code {
 .postit {
   background-color: #fff783;
   padding: 1rem;
-  min-height: 8vw;
+  height: 10vw;
+  width: 15vw;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .postit-header {
@@ -68,4 +55,51 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(29, 29, 148);
+  color: white;
+  font-size: x-large;
+}
+
+.addButton:hover {
+  background-color: rgb(38, 38, 196);
+  cursor: pointer;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: #fff783;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.newPostIt-footer {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 2vw;
+}
+
+.saveButton {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(29, 29, 148);
+  color: white;
+  padding: 0.2vw 1vw 0.2vw 1vw;
+}
+
+.saveButton:hover {
+  background-color: rgb(38, 38, 196);
+  cursor: pointer;
 }

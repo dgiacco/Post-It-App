@@ -1,12 +1,12 @@
 import { FaTrashAlt } from "react-icons/fa";
 
-const PostIt = () => {
+const PostIt = ({ text }) => {
   return (
     <div className="postit">
       <div className="postit-header">
         <FaTrashAlt />
       </div>
-      <p className="postit-body">post it paragraph</p>
+      <p className="postit-body">{ text }</p>
     </div>
   );
 };

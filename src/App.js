@@ -1,15 +1,24 @@
 import './App.css';
+import { useState } from 'react';
 import PostItList from './Components/PostItList';
 
 const App = () => {
+  const [ postIt, setPostIt ] = useState([
+    {
+      text: "This is an example!"
+    },
+    {
+      text: "This is ANOTHER example!"
+    }
+  ]);
+
   return (
     <div>
       <div className="header">
         <h1>My Post Its</h1>
-        <button className="newPostItButton">Create new Post It</button>
       </div>
       <div className="postit-container">
-        <PostItList />
+        <PostItList postIt={ postIt }/>
       </div>
     </div>
   );
