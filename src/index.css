@@ -12,7 +12,31 @@ code {
     monospace;
 }
 
-.postit-wall {
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+
+.newPostItButton {
+  min-width: 10vw;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.5vw;
+  background-color: rgb(0, 0, 187);
+  color: white;
+}
+
+.newPostItButton:hover {
+  background-color: rgb(132, 196, 218);
+  color: black;
+}
+
+.postit-container {
   max-width: 80%;
   margin-right: auto;
   margin-left: auto;
@@ -28,13 +52,20 @@ code {
 
 .postit {
   background-color: #fff783;
-  padding: 2rem;
+  padding: 1rem;
   min-height: 8vw;
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
 }
 
 .postit-header {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.postit-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

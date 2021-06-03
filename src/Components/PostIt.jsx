@@ -6,7 +6,7 @@ const PostIt = () => {
       <div className="postit-header">
         <FaTrashAlt />
       </div>
-      <p>post it paragraph</p>
+      <p className="postit-body">post it paragraph</p>
     </div>
   );
 };
