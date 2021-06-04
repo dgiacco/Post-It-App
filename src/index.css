@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -55,6 +41,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: small;
 }
 
 .addButton {
@@ -75,10 +62,15 @@ code {
   cursor: pointer;
 }
 
+.postit.new {
+  padding-top: 2vw;
+}
+
 textarea {
   border: none;
   resize: none;
   background-color: #fff783;
+  font-size: small;
 }
 
 textarea:focus {
@@ -87,11 +79,11 @@ textarea:focus {
 
 .newPostIt-footer {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
   margin-top: 2vw;
 }
 
-.saveButton {
+.newPostItButtons {
   border: none;
   border-radius: 10px;
   background-color: rgb(29, 29, 148);
@@ -99,7 +91,7 @@ textarea:focus {
   padding: 0.2vw 1vw 0.2vw 1vw;
 }
 
-.saveButton:hover {
+.newPostItButtons:hover {
   background-color: rgb(38, 38, 196);
   cursor: pointer;
 }

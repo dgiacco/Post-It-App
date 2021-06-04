@@ -1,14 +1,17 @@
+import { useState } from 'react';
 import PostIt from "./PostIt";
 import NewPostIt from "./NewPostIt";
 
-const PostItList = ({ postIt }) => {
+const PostItList = ({ postIt, addPostIt }) => {
+  const [isCreating, setIsCreating] = useState(false);
+
   return (
     <div className="postit-list">
       { postIt.map((postIt) => (
-        <PostIt text={ postIt.text }/>
+        <PostIt key={ postIt.id } id={ postIt.id } text={ postIt.text }/>
       )) }
-      <NewPostIt />
-      <button className="addButton">+</button>
+      { isCreating && <NewPostIt addPostIt={ addPostIt } setIsCreating={ setIsCreating }/> }
+      { !isCreating && <button className="addButton" onClick={() => setIsCreating(true)}>+</button>}
     </div>
   );
 };
