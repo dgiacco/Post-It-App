@@ -69,7 +69,8 @@
 textarea {
   border: none;
   resize: none;
-  background-color: #fff783;
+  background-color: Transparent;
+  background-repeat:no-repeat;
   font-size: small;
 }
 
@@ -94,4 +95,8 @@ textarea:focus {
 .newPostItButtons:hover {
   background-color: rgb(38, 38, 196);
   cursor: pointer;
+}
+
+.deleteButton {
+  cursor:pointer;   
 }

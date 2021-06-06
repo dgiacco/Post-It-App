@@ -1,7 +1,14 @@
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import PostItList from './Components/PostItList';
 import { v4 as uuidv4 } from 'uuid';
+import TrashBin from './Components/TrashBin';
 
 const App = () => {
   const [ postIts, setPostIts ] = useState([
@@ -42,15 +49,37 @@ const App = () => {
     setPostIts(newPostIts);
   };
 
+  const deletePostIt = (id) => {
+    const newPostIts = postIts.filter(postIt => postIt.id !== id);
+    setPostIts(newPostIts);
+  }
+
   return (
-    <div>
-      <div className="header">
-        <h1>My Post Its</h1>
-      </div>
-      <div className="postit-container">
-        <PostItList postIt={ postIts } addPostIt={ addPostIt }/>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/trashbin">
+          <TrashBin />
+          <Link to="/">
+            <button>Back</button>
+          </Link>
+        </Route>
+        <Route path="/">
+          <div>
+            <div className="header">
+              <h1>My Post Its</h1>
+            </div>
+            <div className="postit-container">
+              <PostItList postIt={ postIts } addPostIt={ addPostIt } deletePostIt={ deletePostIt }/>
+            </div>
+            <div>
+              <Link to="/trashbin">
+                <button>Trash bin</button>
+              </Link>
+            </div>
+          </div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

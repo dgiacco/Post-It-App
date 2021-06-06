@@ -1,10 +1,11 @@
 import { FaTrashAlt } from "react-icons/fa";
 
-const PostIt = ({ text }) => {
+const PostIt = ({ id, text, deletePostIt }) => {
+
   return (
     <div className="postit">
       <div className="postit-header">
-        <FaTrashAlt />
+        <FaTrashAlt className="deleteButton" onClick={ () => deletePostIt(id) }/>
       </div>
       <p className="postit-body">{ text }</p>
     </div>
