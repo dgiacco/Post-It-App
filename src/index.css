@@ -100,3 +100,10 @@ textarea:focus {
 .deleteButton {
   cursor:pointer;   
 }
+
+.trashbinIcon {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 4vw;
+  margin-right: 10vw;
+}

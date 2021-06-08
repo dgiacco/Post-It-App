@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
+import DeletedPostitList from "../Components/DeletedPostitList"
 
 const TrashBin = () => {
   return(
     <div>
-      <div>Trash bin</div>
+      <div className="header">
+        <h1>Trash bin</h1>
+      </div>
       <div className="postit-container">
-        
+        <DeletedPostitList />
       </div>
       <Link to="/">
-        <button>Back</button>
+        <button>Back to workspace</button>
       </Link>
     </div>
   )
