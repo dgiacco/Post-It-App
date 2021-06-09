@@ -104,6 +104,11 @@ textarea:focus {
 .trashbinIcon {
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 4vw;
+  margin-top: 4vh;
   margin-right: 10vw;
+}
+
+.restoreButton {
+  cursor:pointer;
+  margin-right: 1rem;
 }

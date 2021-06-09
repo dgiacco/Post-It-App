@@ -22,9 +22,8 @@ const Workspace = () => {
   const deletePostIt = (id) => {
     const newPostIts = postIts.filter(postIt => postIt.id !== id);
     const deletedPostit = postIts.filter(postIt => postIt.id === id);
-    deletedPostIts.push(deletedPostit[0]);
     setPostIts(newPostIts);
-    setDeletedPostIts(deletedPostIts);
+    setDeletedPostIts([...deletedPostIts, ...deletedPostit]);
   };
 
   return(
@@ -42,7 +41,7 @@ const Workspace = () => {
       <div>
         <Link to="/trashbin">
           <div className="trashbinIcon">
-            <FaTrashRestore size="4vw" color="rgb(29, 29, 148)"/>
+            <FaTrashRestore size="50px" color="rgb(29, 29, 148)"/>
           </div>
         </Link>
       </div>
