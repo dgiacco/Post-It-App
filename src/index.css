@@ -6,14 +6,6 @@
   margin-bottom: 2vw;
 }
 
-.postit-container {
-  max-width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 2vw;
-  padding-right: 2vw;
-}
-
 .postit-list {
   display: grid;
   justify-items: center;

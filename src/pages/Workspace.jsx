@@ -31,13 +31,11 @@ const Workspace = () => {
       <div className="header">
         <h1>My Post Its</h1>
       </div>
-      <div className="postit-container">
-        <PostItList
-          postIt={postIts}
-          addPostIt={addPostIt}
-          deletePostIt={deletePostIt}
-        />
-      </div>
+      <PostItList
+        postIt={postIts}
+        addPostIt={addPostIt}
+        deletePostIt={deletePostIt}
+      />
       <div>
         <Link to="/trashbin">
           <div className="trashbinIcon">
