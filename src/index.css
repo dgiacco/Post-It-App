@@ -70,6 +70,17 @@ textarea:focus {
   outline: none;
 }
 
+.editInput {
+  border: none;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  font-size: small;
+}
+
+.editInput:focus {
+  outline: none;
+}
+
 .newPostIt-footer {
   display: flex;
   justify-content: space-between;

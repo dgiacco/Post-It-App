@@ -1,7 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 import { FaRecycle } from "react-icons/fa";
 
-const PostIt = ({ id, text, deletePostIt, isDeleted, restorePostIt }) => {
+const PostIt = ({ id, text, deletePostIt, isDeleted, restorePostIt, editPostIt }) => {
 
   return (
     <div className="postit">
@@ -9,7 +9,7 @@ const PostIt = ({ id, text, deletePostIt, isDeleted, restorePostIt }) => {
         <FaTrash className="deleteButton" onClick={ () => deletePostIt(id) }/>
         { isDeleted && <FaRecycle className="restoreButton" onClick={ () => restorePostIt(id) } /> }
       </div>
-      <p className="postit-body">{ text }</p>
+      <input className="editInput" value={text} onChange={editPostIt} name="text"></input>
     </div>
   );
 };

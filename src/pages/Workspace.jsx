@@ -26,6 +26,12 @@ const Workspace = () => {
     setDeletedPostIts([...deletedPostIts, ...deletedPostit]);
   };
 
+  const editPostIt = (event) => {
+    setPostIts([{
+      id: postIts[0].id,
+      text: event.target.value}])
+  };
+
   return(
     <div>
       <div className="header">
@@ -35,6 +41,7 @@ const Workspace = () => {
         postIt={postIts}
         addPostIt={addPostIt}
         deletePostIt={deletePostIt}
+        editPostIt={editPostIt}
       />
       <div>
         <Link to="/trashbin">
