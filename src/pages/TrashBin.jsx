@@ -45,10 +45,12 @@ const TrashBin = () => {
           <h3>Trash bin is empty!</h3>
         )}
       </div>
-      <button onClick={deleteAllPostIts}>Clear trash bin</button>
-      <Link to="/">
-        <button>Back to workspace</button>
-      </Link>
+      <div className="trashbinFooter">
+        <Link to="/">
+          <button className="trashbinButtons">Back to workspace</button>
+        </Link>
+        <button className="trashbinButtons" onClick={deleteAllPostIts}>Clear trash bin</button>
+      </div>
     </div>
   );
 };

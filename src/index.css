@@ -165,3 +165,22 @@ textarea:focus {
   cursor: pointer;
   margin: 2px;
 }
+
+.trashbinFooter {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.trashbinButtons {
+  background-color: rgb(29, 29, 148);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.trashbinButtons:hover {
+  background-color: rgb(38, 38, 196);
+  cursor: pointer;
+}
