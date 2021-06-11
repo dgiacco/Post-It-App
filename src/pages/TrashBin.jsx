@@ -42,7 +42,9 @@ const TrashBin = () => {
             deletedPostIts={deletedPostIts}
           />
         ) : (
-          <h3>Trash bin is empty!</h3>
+          <div className="emptyTrashbin">
+            <h3>There is nothing here!</h3>
+          </div>
         )}
       </div>
       <div className="trashbinFooter">
