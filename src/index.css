@@ -62,7 +62,7 @@ textarea {
   border: none;
   resize: none;
   background-color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   font-size: small;
 }
 
@@ -73,7 +73,7 @@ textarea:focus {
 .editInput {
   border: none;
   background-color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   font-size: small;
 }
 
@@ -101,10 +101,10 @@ textarea:focus {
 }
 
 .deleteButton {
-  cursor:pointer;   
+  cursor: pointer;
 }
 
-.trashbinIcon {
+.trashbinIconContainer {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 4vh;
@@ -112,6 +112,26 @@ textarea:focus {
 }
 
 .restoreButton {
-  cursor:pointer;
+  cursor: pointer;
   margin-right: 1rem;
+}
+
+.trashbinIcon {
+  position: relative;
+}
+
+.trashbinCount {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  background-color: red;
+  color: #fff;
+  padding: 3px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.trashbinCount div {
+  margin-top: 1px;
 }

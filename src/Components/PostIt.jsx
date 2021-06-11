@@ -9,7 +9,7 @@ const PostIt = ({ id, text, deletePostIt, isDeleted, restorePostIt, editPostIt }
         <FaTrash className="deleteButton" onClick={ () => deletePostIt(id) }/>
         { isDeleted && <FaRecycle className="restoreButton" onClick={ () => restorePostIt(id) } /> }
       </div>
-      <input className="editInput" value={text} onChange={editPostIt} name="text"></input>
+      <input className="editInput" value={text} onChange={event => editPostIt(event, id)} name="text"></input>
     </div>
   );
 };

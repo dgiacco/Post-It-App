@@ -26,10 +26,18 @@ const Workspace = () => {
     setDeletedPostIts([...deletedPostIts, ...deletedPostit]);
   };
 
-  const editPostIt = (event) => {
-    setPostIts([{
-      id: postIts[0].id,
-      text: event.target.value}])
+  const editPostIt = (event, id) => {
+    
+    const editedPostIts = postIts.map((postIt) => {
+      console.log(postIt.id === id);
+      if (postIt.id === id) {
+        console.log(postIt.text);
+        postIt.text = event.target.value
+        
+      }
+      return postIt
+    })
+    setPostIts(editedPostIts)
   };
 
   return(
@@ -45,8 +53,11 @@ const Workspace = () => {
       />
       <div>
         <Link to="/trashbin">
-          <div className="trashbinIcon">
-            <FaTrashRestore size="50px" color="rgb(29, 29, 148)"/>
+          <div className="trashbinIconContainer">
+            <div className="trashbinIcon">
+              <FaTrashRestore size="60px" color="rgb(29, 29, 148)" />
+              <div className='trashbinCount'><div>{ deletedPostIts.length }</div></div>
+            </div>
           </div>
         </Link>
       </div>
