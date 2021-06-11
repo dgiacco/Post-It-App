@@ -24,9 +24,19 @@
   border-radius: 10px;
 }
 
+.greenPostIt {
+  background-color: rgb(222, 252, 177);
+  padding: 1rem;
+  height: 10vw;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
 .postit-header {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between; 
 }
 
 .postit-body {
@@ -102,6 +112,7 @@ textarea:focus {
 
 .deleteButton {
   cursor: pointer;
+  margin: 2px;
 }
 
 .trashbinIconContainer {
@@ -132,6 +143,25 @@ textarea:focus {
   height: 20px;
   text-align: center;
 }
+
 .trashbinCount div {
   margin-top: 1px;
+}
+
+.turnYellowButton {
+  height: 15px;
+  width: 15px;
+  border-color: black;
+  background-color: #fff783;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.turnGreenButton {
+  height: 15px;
+  width: 15px;
+  border-color: black;
+  background-color: rgb(222, 252, 177);
+  cursor: pointer;
+  margin: 2px;
 }
