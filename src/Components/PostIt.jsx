@@ -1,25 +1,15 @@
-import { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { FaRecycle } from "react-icons/fa";
 import classnames from "classnames";
 
-const PostIt = ({ id, text, deletePostIt, isDeleted, restorePostIt, editPostIt }) => {
-  const [isYellow, setisYellow] = useState(true)
-
-  const changeToGreen = () => {
-    setisYellow(false)
-  }
-
-  const changeToYellow = () => {
-    setisYellow(true)
-  }
+const PostIt = ({ id, text, isYellow, deletePostIt, isDeleted, restorePostIt, editPostIt, changeToGreen, changeToYellow }) => {
 
   return (
     <div className={classnames({"postit": isYellow, "greenPostIt": !isYellow})}>
       <div className="postit-header">
         <div>
-          { !isDeleted && <button className="turnYellowButton" onClick={changeToYellow}></button> }
-          { !isDeleted && <button className="turnGreenButton" onClick={changeToGreen}></button> }
+          { !isDeleted && <button className="turnYellowButton" onClick={() => changeToYellow(id)}></button> }
+          { !isDeleted && <button className="turnGreenButton" onClick={() => changeToGreen(id)}></button> }
         </div>
         <div className="deleteAndRestoreButtonContainer" >
           { isDeleted && <FaRecycle className="restoreButton" onClick={ () => restorePostIt(id) } /> }

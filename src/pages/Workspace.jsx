@@ -14,6 +14,7 @@ const Workspace = () => {
     const newPostIt = {
       id: uuidv4(),
       text: text,
+      isYellow: true,
     };
     const newPostIts = [...postIts, newPostIt];
     setPostIts(newPostIts);
@@ -29,27 +30,48 @@ const Workspace = () => {
   const editPostIt = (event, id) => {
     
     const editedPostIts = postIts.map((postIt) => {
-      console.log(postIt.id === id);
       if (postIt.id === id) {
-        console.log(postIt.text);
         postIt.text = event.target.value
-        
       }
       return postIt
     })
     setPostIts(editedPostIts)
   };
 
+  const changeToGreen = (id) => {
+    
+    const greenPostIt = postIts.map((postIt) => {
+      if (postIt.id === id) {
+        postIt.isYellow = false
+      }
+      return postIt
+    })
+    setPostIts(greenPostIt)
+  };
+
+  const changeToYellow = (id) => {
+    
+    const yellowPostIt = postIts.map((postIt) => {
+      if (postIt.id === id) {
+        postIt.isYellow = true
+      }
+      return postIt
+    })
+    setPostIts(yellowPostIt)
+  };
+
   return(
     <div>
       <div className="header">
-        <h1>My Post Its</h1>
+        <h1>My Poost-Its</h1>
       </div>
       <PostItList
         postIt={postIts}
         addPostIt={addPostIt}
         deletePostIt={deletePostIt}
         editPostIt={editPostIt}
+        changeToGreen={changeToGreen}
+        changeToYellow={changeToYellow}
       />
       <div>
         <Link to="/trashbin">

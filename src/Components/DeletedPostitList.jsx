@@ -9,6 +9,7 @@ const DeletedPostiItList = ({deletedPostIts, deletePostIt, restorePostIt}) => {
           key={deletedPostIt.id}
           id={deletedPostIt.id}
           text={deletedPostIt.text}
+          isYellow={deletedPostIt.isYellow}
           deletePostIt={deletePostIt}
           isDeleted
           restorePostIt={restorePostIt}
