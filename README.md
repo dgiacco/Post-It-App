@@ -10,6 +10,12 @@ To run this project, you will need to have node installed. After having cloned t
 
 #### Technical decisions:
 
+- I used a custom hook (useLocalStorage) to make it easier to connect the components state and the local storage.
+- The Workspace and the Trashbin are separated from the rest of the components in a folder called "pages" so they could be more easy to identify.
+
+
+#### Some extra functionalities:
+
 I decided to add a couple extra functionalities to upgrade the UX such as:
 - You can change your Post It color to help you prioritize, categorize or just to have fun!
 - An alert will pop up when deleting a Post It from the trash bin (permanently) asking if you are sure, just to prevent any mistake!
@@ -23,4 +29,4 @@ This project uses three (3) dependencies which were added for the following reas
 - **Classnames:** To apply conditional CSS for the Post-It color change.
 
 
-## Hope you enjoy it! :wink:
+## Hope you enjoy it!
