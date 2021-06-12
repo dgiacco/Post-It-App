@@ -51,7 +51,19 @@ const TrashBin = () => {
         <Link to="/">
           <button className="trashbinButtons">Back to workspace</button>
         </Link>
-        <button className="trashbinButtons" onClick={deleteAllPostIts}>Clear trash bin</button>
+        <button
+          className="trashbinButtons"
+          onClick={() => {
+            if (
+              window.confirm(
+                "This will permanently delete every item in the trash bin. Are you sure?"
+              )
+            )
+              deleteAllPostIts();
+          }}
+        >
+          Clear trash bin
+        </button>
       </div>
     </div>
   );

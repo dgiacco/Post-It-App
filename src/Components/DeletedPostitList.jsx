@@ -1,7 +1,10 @@
 import PostIt from "../Components/PostIt";
 
-const DeletedPostiItList = ({deletedPostIts, deletePostIt, restorePostIt}) => {
-  
+const DeletedPostiItList = ({
+  deletedPostIts,
+  deletePostIt,
+  restorePostIt,
+}) => {
   return (
     <>
       {deletedPostIts.map((deletedPostIt) => (
