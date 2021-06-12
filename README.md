@@ -1,4 +1,4 @@
-# Welcome to Poost-It App! :tw-1f603: 
+# Welcome to Poost-It App! :grinning:
 
 
 #### Installation:
@@ -23,4 +23,4 @@ This project uses three (3) dependencies which were added for the following reas
 - **Classnames:** To apply conditional CSS for the Post-It color change.
 
 
-## Hope you enjoy it! :tw-1f609: 
+## Hope you enjoy it! :wink:
