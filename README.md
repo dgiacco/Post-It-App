@@ -1,4 +1,4 @@
-# Welcome to Poost-It App! :grinning:
+# Welcome to Post-It App! :grinning:
 
 
 ### Installation:
